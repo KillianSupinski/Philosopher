@@ -19,6 +19,7 @@ typedef struct  s_data
     int             time_to_eat;
     int             time_to_sleep;
     bool            last_param;
+    int             meal_goal;
     volatile int    stop;
     uint64_t        start_ms;
     pthread_mutex_t *forks;
@@ -41,5 +42,6 @@ typedef struct s_philo
 long long	get_time_ms(void);
 long    ft_atoi(const char *str);
 int     ft_ispositive(char *str);
-
+int init_philo(t_data *data);
+int join_threads(t_data *data, pthread_t *threads);
 #endif

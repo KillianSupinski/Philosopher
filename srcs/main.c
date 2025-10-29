@@ -46,9 +46,10 @@ void init_data(t_data *data, char **argv)
     data->time_to_eat = (int)ft_atoi(argv[3]);
     data->time_to_sleep = (int)ft_atoi(argv[4]);
     if (data->last_param)
-        data->stop = (int)ft_atoi(argv[5]);
+        data->meal_goal = (int)ft_atoi(argv[5]);
     else
-        data->stop = -1;
+        data->meal_goal = -1;
+    data->stop = 0;
     if (data->num_philos < 1 || data->time_to_die < 0 || data->time_to_eat < 0
         || data->time_to_sleep < 0 || (data->last_param && data->stop < 0))
     {

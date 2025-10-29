@@ -61,3 +61,14 @@ long long	get_time_ms(void)
 	gettimeofday(&tv, NULL);
 	return (tv.tv_sec * 1000LL + tv.tv_usec / 1000);
 }
+
+int join_threads(t_data *data, pthread_t *threads)
+{
+    int i = 0;
+    while (i < data->num_philos)
+    {
+        pthread_join(threads[i], NULL);
+        i++;
+    }
+    return 1;
+}
