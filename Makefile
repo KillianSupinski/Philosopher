@@ -18,7 +18,11 @@ INCLUDES    = -I$(INCDIR)
 # Source files (tous les .c dans srcs/ et sous-dossiers)
 SOURCES 	=	$(SRCDIR)/main.c \
         		$(SRCDIR)/utils.c \
-		  		$(SRCDIR)/init.c
+		  		$(SRCDIR)/init.c \
+		  		$(SRCDIR)/routine.c \
+		  		$(SRCDIR)/monitoring.c \
+				$(SRCDIR)/utils2.c		
+
 # Object files and dependencies
 OBJS        = $(SOURCES:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 DEPS        = $(OBJS:.o=.d)
